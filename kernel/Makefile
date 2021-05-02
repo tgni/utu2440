@@ -19,7 +19,7 @@ all:config
 	@$(MKIMG) -n 'tgni' -A arm -O linux -T kernel -C none -a 0x30008000 -e 0x30008040 -d $(OUTPUT_DIR)/zImage $(OUTPUT_DIR)/zImage.img
 
 config:
-	#cd $(KERNEL_DIR) && make mrproper
+	@sed -i '69c CONFIG_INITRAMFS_SOURCE="$(ROOTFS_DIR)"' $(KERNEL_DIR)/my2440_config
 	@cp $(KERNEL_DIR)/my2440_config $(KERNEL_DIR)/.config
 
 clean:
