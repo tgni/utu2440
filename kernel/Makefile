@@ -7,8 +7,8 @@ ifndef TOPDIR
 export TOPDIR=$(PWD)/..
 endif
 
-include $(TOPDIR)/scripts/rules.mk
 include $(TOPDIR)/scripts/path.mk
+include $(TOPDIR)/scripts/rules.mk
 
 dirs=$(KERNEL_DIR)
 MKIMG=$(TOPDIR)/scripts/mkimage

@@ -2,7 +2,7 @@
 #$(error "pls try export BOARD=xxx or make BOARD=xxx")
 #endif
 
-CROSS_COMPILE=arm-linux-
+CROSS_COMPILE=$(TOOLSCHAIN_DIR)/arm-linux-
 #CROSS_COMPILE=arm-linux-gnueabihf-
 CC=$(CROSS_COMPILE)gcc
 AR=$(CROSS_COMPILE)ar

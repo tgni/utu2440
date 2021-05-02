@@ -7,8 +7,9 @@ CURDIR:=$(shell pwd)
 ifndef TOPDIR
 export TOPDIR=$(CURDIR)/..
 endif
-include $(TOPDIR)/scripts/rules.mk
+
 include $(TOPDIR)/scripts/path.mk
+include $(TOPDIR)/scripts/rules.mk
 
 dirs :=$(BUSYB0X_DIR)
 

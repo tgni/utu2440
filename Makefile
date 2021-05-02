@@ -5,8 +5,11 @@
 #
 TOPDIR:=$(shell pwd)
 export TOPDIR 
-include $(TOPDIR)/scripts/rules.mk
+
 include $(TOPDIR)/scripts/path.mk
+include $(TOPDIR)/scripts/rules.mk
+
+.PHONY: all clean distclean boot apps kernel apps_clean kernel_clean help
 
 dirs :=$(BOOTS_DIR) $(APPS_DIR) $(KERNELS_DIR)
 
